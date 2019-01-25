@@ -182,7 +182,7 @@ See [here](ssh.md) for different types of SSH connection with respect to your OS
  
 4. What is the disk size of the uncompressed dataset, How many images are in the directory 'BSR/BSDS500/data/images'?
  
-5. What are all the different resolutions? What is their format? Tip: use ``awk`` 
+5. What are all the different resolutions? What is their format? Tip: use ``awk``, ``sort``, ``uniq`` 
 
 6. How many of them are in *landscape* orientation (opposed to *portrait*)? Tip: use ``awk`` and ``cut``
  
