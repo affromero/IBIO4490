@@ -69,7 +69,7 @@ Programs can work together in the linux environment, we just have to properly 'l
       -  `` < `` : Send contents of a file to standard input
       -  `` 2>&1``: Send error output to the same place as standard output
 
-2. To have a nicer display of the *passwd* file we can use the following command. It sends the content of the file to the ``tr`` command, which can be configured to format columns to tabs.
+2. To modify the content display of a file we can use the following command. It sends the content of the file to the ``tr`` command, which can be configured to format columns to tabs.
 
    ```bash
    cat milonga.txt | tr '\n' ' '
