@@ -8,6 +8,7 @@ This is a basic tutorial on Python. We aim to cover general topics such as synta
 ## Additional Info about LaTeX
 - [Sharelatex](https://www.sharelatex.com)
 - [Overleaf](https://www.overleaf.com/)
+- [CVPR Author kit](http://cvpr2019.thecvf.com/files/cvpr2019AuthorKit.tgz)
 
 ## FYI - Requierements and dependencies installation
 It is recommended to use Python [Anaconda](https://www.continuum.io/downloads) and its powerful package manager, [conda](https://github.com/conda/conda) to install additional packages.
@@ -47,5 +48,4 @@ Notes:
 - Print the processing time at the end of the script. _time_ is the module you need for this purpose.
 
 Bonus: 
-- I could contemplate the posibility of a bonus if someone soes not use the BDSD dataset. Be creative.
-
+- I could contemplate the posibility of a bonus if someone does not use the BDSD dataset. Be creative.
