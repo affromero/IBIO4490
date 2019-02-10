@@ -23,6 +23,7 @@ Another example from two pictures:
 ![](imgs/ObamaTrump.png)
 
 Or, yours truly:
+
 ![](imgs/af.jpg)
 ![](imgs/pa.jpg)
 ![](imgs/AF_PA.jpg)
