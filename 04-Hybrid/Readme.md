@@ -36,7 +36,7 @@ Or, yours truly:
 
 ### Start with good images 
 
-The data folder (originally downloaded from [here](http://cs.brown.edu/courses/cs143/proj1/)) contains several pairs of aligned images. Choose one pair (not any pair, be sure the images look similar), and load both  into matlab.
+The data folder (originally downloaded from [here](http://cs.brown.edu/courses/cs143/proj1/)) contains several pairs of aligned images. Choose one pair (not any pair, be sure the images look similar), and load both into matlab/python.
 
 ### Filtering
 Matlab:
