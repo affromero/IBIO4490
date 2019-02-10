@@ -1,5 +1,3 @@
-saddsa
-
 # Introduction to Linux
 
 ## Preparation
