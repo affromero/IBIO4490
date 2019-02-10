@@ -9,3 +9,4 @@ solution/
 _data/
 *.pyc
 .ipynb*
+clone/
