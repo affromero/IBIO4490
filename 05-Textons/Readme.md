@@ -268,7 +268,7 @@ D = np.linalg.norm(histc(tmapBase2.flatten(), np.arange(k))/tmapBase2.size - \
 
 ## Classification
 
-After the images are represented using a texton dictionary, train and evaluate a classifier using the provided database. Notice that the images in the mirror have been already divided into train and test sets, use this split. This was done by randomly assigning 10 images from each category to the test. Try two different classifiers:
+After the images are represented using a texton dictionary, train and evaluate a classifier using the provided database.
 
 -   **Nearest neighbour:** Use intersection of histograms or Chi-Square metrics.
 
