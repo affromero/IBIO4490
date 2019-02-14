@@ -1,4 +1,4 @@
-# Lab 05 - Textons 
+# Textons 
 
 In this lab you will use a strategy to represent images using Textons. Then you will train, and evaluate a classifier based on the texton representation. 
 
@@ -10,7 +10,6 @@ Try to develop quality code so that you can reuse it in the following labs.
 
 The database for this lab is the famous [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html):
 
-```
 <html>
 <table>
     <tr>
@@ -145,7 +144,6 @@ The database for this lab is the famous [CIFAR-10](https://www.cs.toronto.edu/~k
     </tr>
 </table>
 </html>
-```
 
 Download the CIFAR-10 python version and uncompress it (it will create a folder  `cifar-10-batches-py`, with the binary files inside).  Please refer to `cifar10.py` for properly loading the data into python. 
 
@@ -172,7 +170,7 @@ addpath('matlab')
 [fb] = fbCreate;
 
 %%Load sample images from disk
-imBase1=double(rgb2gray(imread('img/avion1.jpg')))/255;
+imBase1=double(rgb2gray(imread('img/moto1.jpg')))/255;
 imBase2=double(rgb2gray(imread('img/perro1.jpg')))/255;
 
 %Set number of clusters
@@ -185,7 +183,7 @@ filterResponses=fbRun(fb,horzcat(imBase1,imBase2))
 [map,textons] = computeTextons(filterResponses,k);
 
 %Load more images
-imTest1=double(rgb2gray(imread('img/avion2.jpg')))/255;
+imTest1=double(rgb2gray(imread('img/moto2.jpg')))/255;
 imTest2=double(rgb2gray(imread('img/perro2.jpg')))/255;
 
 %Calculate texton representation with current texton dictionary
@@ -194,7 +192,7 @@ tmapBase2 = assignTextons(fbRun(fb,imBase2),textons');
 tmapTest1 = assignTextons(fbRun(fb,imTest1),textons');
 tmapTest2 = assignTextons(fbRun(fb,imTest2),textons');
 
-%Check the euclidean distances between the histograms and convince yourself that the images of the goats are closer because they have similar texture pattern
+%Check the euclidean distances between the histograms and convince yourself that the images of the bikes are closer because they have similar texture pattern
 %Can you tell why we need to create a histogram before measuring the distance?
 D = norm(histc(tmapBase1(:),1:k)/numel(tmapBase1) - histc(tmapTest1(:),1:k)/numel(tmapTest1))
 D = norm(histc(tmapBase1(:),1:k)/numel(tmapBase1) - histc(tmapTest2(:),1:k)/numel(tmapTest2))
@@ -218,7 +216,7 @@ from skimage import color
 from skimage import io
 from skimage.transform import resize
 
-imBase1=color.rgb2gray(resize(io.imread('img/avion1.jpg'), (32, 32)))
+imBase1=color.rgb2gray(resize(io.imread('img/moto1.jpg'), (32, 32)))
 imBase2=color.rgb2gray(resize(io.imread('img/perro1.jpg'), (32, 32)))
 
 #Set number of clusters
@@ -234,7 +232,7 @@ from computeTextons import computeTextons
 map, textons = computeTextons(filterResponses, k)
 
 #Load more images
-imTest1=color.rgb2gray(resize(io.imread('img/avion2.jpg'), (32, 32)))
+imTest1=color.rgb2gray(resize(io.imread('img/moto2.jpg'), (32, 32)))
 imTest2=color.rgb2gray(resize(io.imread('img/perro2.jpg'), (32, 32)))
 
 #Calculate texton representation with current texton dictionary
@@ -244,7 +242,7 @@ tmapBase2 = assignTextons(fbRun(fb,imBase2),textons.transpose())
 tmapTest1 = assignTextons(fbRun(fb,imTest1),textons.transpose())
 tmapTest2 = assignTextons(fbRun(fb,imTest2),textons.transpose())
 
-#Check the euclidean distances between the histograms and convince yourself that the images of the goats are closer because they have similar texture pattern
+#Check the euclidean distances between the histograms and convince yourself that the images of the bikes are closer because they have similar texture pattern
 
 # --> Can you tell why do we need to create a histogram before measuring the distance? <---
 
@@ -302,8 +300,8 @@ The report for this laboratory must include:
     -   How can we classify an image using textons? (don't be overly detailed on this, just one or two paragraphs)
     -   What does the texton representation of an image tell us?
     -   How did you create the dictionary?
-    -   How many textons are you using?, Why?
-    -   Can you tell if some filters are more discriminative than others?, why would this happen?
+    -   How many textons are you using? Why?
+    -   Can you tell if some filters are more discriminative than others? Why would this happen?
 -   Description of the classifiers, hyperparameters and distance metrics
     -   What hyperparameters can you find in the classifiers? How can you choose their values?
     -   Did you apply any adjustments or preprocessing to the data? why?
@@ -311,10 +309,10 @@ The report for this laboratory must include:
     - Provide the confusion matrix for the training and test sets, what is it telling you?. 
     - Do you have another metric to measure the performance of your method? why do you need it?
 -   Discussion of the results
-    -   Which classifier works best?, any idea why?
-    -   How much time does it takes to create the texton dictionary? why is it so slow?
+    -   Which classifier works best? Any idea why?
+    -   How much time does it takes to create the texton dictionary? Why is it so slow?
     -   How much time does it takes to train and apply both kinds of classifiers?
-    -   What categories cause the most confusion? could you give some insight on why this happens?
+    -   What categories cause the most confusion? Could you give some insight on why this happens?
     -   What are the limitations of the method? (CPU and RAM constraints are well known limitations, go beyond this!!)
     -   How could your method be improved?
 
