@@ -39,7 +39,7 @@ def load_cifar10(meta='cifar-10-batches-py', mode=1):
     import os
     if isinstance(mode, int):
         for i in range(mode):
-            file_ = os.path.join(meta, 'data_batch_'+str(i))           
+            file_ = os.path.join(meta, 'data_batch_'+str(i+1))           
             _dict = merge_dict(_dict, unpickle(file_))
     else:
         file_ = os.path.join(meta, 'test_batch')
