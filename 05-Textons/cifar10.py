@@ -25,7 +25,7 @@ def merge_dict(dict1, dict2):
     for key, value in new_dict.items():
         if key=='data':
             new_dict[key] = np.vstack((value[0], value[1]))
-        if key=='labels':
+        elif key=='labels':
             new_dict[key] = np.hstack((value[0], value[1]))            
         elif key=='batch_label':
             new_dict[key] = value[1]
