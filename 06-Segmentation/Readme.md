@@ -20,21 +20,21 @@ Implement your own segmentation method using what you have learned in class. It 
 Matlab
 
 ```matlab
-function segmentation = segmentByClustering( rgbImage, featureSpace, clusteringMethod, numberOfClusters)
+function segmentation = segmentByClustering( rgbImage, colorSpace, clusteringMethod, numberOfClusters)
 ```
 
 Python
 
 
 ```python
-def segmentByClustering( rgbImage, featureSpace, clusteringMethod, numberOfClusters):
+def segmentByClustering( rgbImage, colorSpace, clusteringMethod, numberOfClusters):
     ...
     return segmentation
 ```
 
 Where
 
-- featureSpace : 'rgb', 'lab', 'hsv', 'rgb+xy', 'lab+xy' or 'hsv+xy'
+- colorSpace : 'rgb', 'lab', 'hsv', 'rgb+xy', 'lab+xy' or 'hsv+xy'
 - clusteringMethod = 'kmeans', 'gmm', 'hierarchical' or 'watershed'.
 - numberOfClusters positive integer (larger than 2)
 
@@ -71,41 +71,32 @@ Try different parameters of your function, and inspect them visually before actu
 
 ### Reading ground truth data
 
-The file 'Lab5Images.tar.gz' contains the segmentation ground truth data. It has the same name as the image file and is saved as matlab file (.mat). The mat file contains several manual segmentation created by human annotators.
+The file 'BSDS_small.zip' contains the segmentation ground truth data. It has the same name as the image file and is saved as matlab file (.mat). The mat file contains several manual segmentation created by human annotators.
 
-For example, to look at the ground truth for image ``train/55075`` we can use the following code for Matlab:
-
-```matlab
-gt=load('BSDS_tiny/55075.mat')
-% Load segmentation from third human
-segm=gt.groundTruth{3}.Segmentation;
-image(segm) %Or imagesc?
-colormap colorcube
-
-% create a new figure
-figure
-% Boundaries from first human
-bound=gt.groundTruth{1}.Boundaries;
-image(bound)
-colormap flag
-```
-
-Which is equivalent in Python as:
+For example, to look at the ground truth for image ``train/22090`` we can use the following code for Python:
 
 ```python
 import scipy.io as sio
 import matplotlib.pyplot as plt
+import imageio
 
-gt=sio.loadmat('BSDS_tiny/55075.mat')
-
-#Load segmentation from third human
-segm=gt['groundTruth'][0,2][0][0]['Segmentation']
-plt.imshow(segm, cmap=plt.get_cmap('summer'))
+img = 'BSDS_small/train/22090.jpg'
+plt.imshow(imageio.imread(img))
 plt.show()
 
-#Boundaries from third human
+# Load .mat
+gt=sio.loadmat(img.replace('jpg', 'mat'))
+
+#Load segmentation from fifth human
+segm=gt['groundTruth'][0,5][0][0]['Segmentation']
+plt.imshow(segm, cmap=plt.get_cmap('hot'))
+plt.colorbar()
+plt.show()
+
+#Boundaries from second human
 segm=gt['groundTruth'][0,2][0][0]['Boundaries']
-plt.imshow(segm, cmap=plt.get_cmap('paired'))
+plt.imshow(segm)
+plt.colorbar()
 plt.show()
 
 ```
@@ -142,8 +133,66 @@ The report should have max 5 pages (**English**), if it is necessary use any add
 
 ## Deliverable (python users)
 
-**Your script must be an executable file with the #!.. at the beginning of the file. This opening line must be consistent with the python version you are using**. For instance:
-`#!/usr/local/bin/python2` or `#!/usr/local/bin/python3`.
+**You will end with at least 2 `.py` scripts *i.e.*,  Segment.py (or however you have named your function) and main.py.** 
+
+*main.py* must be an executable file with the #!.. at the beginning of the file. This opening line must be consistent with the python version you are using**, for instance:
+`#!/usr/local/bin/python2` or `#!/usr/local/bin/python3`. 
+
+*main.py* must accept the image file, color space, number of clusters, and method to perform clustering, by arguments like this:
+
+Python users: `./main.py --img_file=xxx --color=xxx --k=xxx --method=xxx`
+
+IPython users: `./main.py -- --img_file=xxx --color=xxx --k=xxx --method=xxx` (check the double line).
+
+For this purpose, you might need `argparse` module:
+
+```python
+def imshow(img, seg, title='Image'):
+    import matplotlib.pyplot as plt
+    plt.imshow(img, cmap=plt.get_cmap('gray'))
+    plt.imshow(seg, cmap=plt.get_cmap('rainbow'), alpha=0.5)
+    cb = plt.colorbar()
+    cb.set_ticks(range(seg.max()+1))
+    plt.title(title)
+    plt.axis('off')
+    plt.show()
+    
+def groundtruth(img_file):
+    import scipy.io as sio
+    img = imageio.imread(img_file)
+    gt=sio.loadmat(img_file.replace('jpg', 'mat'))
+    segm=gt['groundTruth'][0,5][0][0]['Segmentation']
+    imshow(img, segm, title='Groundtruth')
+    
+def check_dataset(folder):
+    import os
+    if not os.path.isdir(folder):
+        # Download it.
+        # Put your code here. Then remove the 'pass' command.
+        pass
+
+if __name__ == '__main__':
+    import argparse
+    import imageio
+    from Segment import segmentByClustering # Change this line if your function has a different name
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument('--color', type=str, default='rgb', choices=['rgb', 'lab', 'hsv', 'rgb+xy', 'lab+xy', 'hsv+xy']) # If you use more please add them to this list.
+    parser.add_argument('--k', type=int, default=4)
+    parser.add_argument('--method', type=str, default='watershed', choices=['kmeans', 'gmm', 'hierarchical', 'watershed'])
+    parser.add_argument('--img_file', type=str, required=True)
+	
+    opts = parser.parse_args()
+
+    check_dataset(opts.img_file.split('/')[0])
+
+    img = imageio.imread(opts.img_file)
+    seg = segmentByClustering(rgbImage=img, colorSpace=opts.color, clusteringMethod=opts.method, numberOfClusters=opts.k)
+    imshow(img, seg, title='Prediction')
+    groundtruth(opts.img_file)
+```
+
+
 
 ## Tip
 
@@ -151,7 +200,7 @@ The report should have max 5 pages (**English**), if it is necessary use any add
 
 ```python
 from skimage import io, color
-filename = 'BSDS_tiny/55067.jpg'
+img = 'BSDS_small/train/22090.jpg'
 rgb = io.imread(filename)
 lab = color.rgb2lab(rgb)
 
