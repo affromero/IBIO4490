@@ -52,11 +52,6 @@ If the input of the function is **MxNxC**, the output should be **MxN**, where e
 
 Before testing your function make sure the segmentation results are somewhat acceptable. To visualize the output of your function use something like:
 
-```matlab
-image(segm)
-colormap colorcube %or another colormap that you like https://la.mathworks.com/help/matlab/ref/colormap.html
-```
-
 ```python
 plt.imshow(segm, cmap=plt.get_cmap('tab20b')) #or another colormap that you like https://matplotlib.org/examples/color/colormaps_reference.html
 plt.show()
@@ -135,8 +130,7 @@ The report should have max 5 pages (**English**), if it is necessary use any add
 
 **You will end with at least 2 `.py` scripts *i.e.*,  Segment.py (or however you have named your function) and main.py.** 
 
-*main.py* must be an executable file with the #!.. at the beginning of the file. This opening line must be consistent with the python version you are using**, for instance:
-`#!/usr/local/bin/python2` or `#!/usr/local/bin/python3`. 
+*main.py* must be an executable file with the #!.. at the beginning of the file. This opening line must be consistent with the python version you are using.
 
 *main.py* must accept the image file, color space, number of clusters, and method to perform clustering, by arguments like this:
 
