@@ -10,3 +10,4 @@ _data/
 *.pyc
 .ipynb*
 clone/
+html/
