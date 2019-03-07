@@ -1,6 +1,6 @@
 # Berkeley Segmentation Dataset and Benchmark (BSDS500)
 
-In this lab you will be testing your previously developed segmentation functions in a real and large segmentation database, the BSDS500. To add some extra motivation, you will also be comparing your methods against those of your teacher, can you beat him?
+In this lab you will be testing your previously developed segmentation functions in a real and large segmentation database, the BSDS500. To add some extra motivation, you will also be comparing your methods against that of your teacher, can you beat him?
 
 ## Resources
 
