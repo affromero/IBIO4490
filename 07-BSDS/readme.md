@@ -67,7 +67,7 @@ The report for this laboratory must include:
 - A brief description of the selected segmentation methods, why did you choose them?, did you make any modification, or enhancements? Why?
 - What are the hyper parameters of these methods, what do they mean? How could you choose them? 
 - What does the precision-recall curve tells us? What would be the ideal result?
-- What can you say about the ODS, OIS and F-max?
+- What can you say about the ODS, OIS, F-max and Cover metrics?
 - Results for the BSDS benchmark (**full test set**) for the three methods.  Do not forget to include a graphic where you compare the curves you generated for the three methods (UCM + yours).
 - Among the methods you developed, which one works best, why?
 - Did you beat Pablo, No? Why?
@@ -76,7 +76,15 @@ The report for this laboratory must include:
 - Do you think the errors on your segmentation methods follow any pattern(s)?
 - How could you improve your algorithms? Think big, be creative, we are in the what if domain.
 
+
+
+### Additional Resources
+
+- [Segmentation metrics](https://www-sciencedirect-com.ezproxy.uniandes.edu.co:8443/science/article/pii/S0047259X06002016).
+- [Figure example](http://cs.brown.edu/courses/cs143/2011/results/proj2/lbsun/).
+- [Matlab debugging](https://www.mathworks.com/help/matlab/ref/dbstop.html).
+
+
+
 ### Deadline
-**March 14 11:59 pm**
-
-
+**March 14, 11:59 pm**
