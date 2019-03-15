@@ -33,9 +33,9 @@ Try also to figure out how these settings change the memory and CPU time require
 
 Use PHOW to train and test a classifier in a **very small** subset of the [image-net](http://www.image-net.org) database.
 
-- http://157.253.63.7/imageNet200.tar
+- http://bcv001.uniandes.edu.co/imageNet200.tar
 
-**This is a large file (~2.4GB)**, so it would be best to download it using ``wget`` in the course server
+**This is a large file (~2.2GB)**, so it would be best to download it using ``wget`` in the course server
 
 Adapt the script from the example to work the train set on this new dataset. What performance do you get with default params? How does it compare to the results from caltech-101? Any idea what causes the differences?.
 
