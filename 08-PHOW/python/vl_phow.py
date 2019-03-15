@@ -14,7 +14,6 @@ def vl_phow(im, **kwargs):
     import math, warnings, os
     from skimage import color 
     from cyvlfeat.sift import dsift
-    from vl_plotframe import vl_plotframe
     import numpy as np
     opts = NameSpace()
     opts.verbose = True 
