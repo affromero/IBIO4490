@@ -8,13 +8,13 @@ Creating the sliding window, multiscale detector is the most complex part of thi
 
 ## Resources
 
-http://bcv001.uniandes.edu.co/LabHOG.zip contains the resources for this lab. There are w directories there:
+http://bcv001.uniandes.edu.co/Lab_HOG.zip contains the resources for this lab. There are 2 directories there:
 
 - Data:
   - caltch_faces: 6,713 cropped 36x36 face images.
   - test_scenes: 130 images for testing.
   - train_non_face_scenes: Negative samples.
-  - extra_test_scenes: It will be updated with **YOUR** pictures for qualitative result and analysis purposes. 
+  - extra_test_scenes: It will be updated with **YOUR** pictures for qualitative result and analysis purposes (I will take pictures of you :| ). 
 - Code:
   - `main.m` The top level script for training and testing your object detector. If you run the code unmodified, it will predict random faces in the test images. It calls the following functions, many of which are simply placeholders in the starter code.
   - `get_positive_features.m` (**you code this**). Load cropped positive trained examples (faces) and convert them to HoG features with a call to vl_hog.
