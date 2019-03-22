@@ -8,7 +8,7 @@ Creating the sliding window, multiscale detector is the most complex part of thi
 
 ## Resources
 
-http://bcv001.uniandes.edu.co/Lab_HOG.zip contains the resources for this lab. There are 2 directories there:
+http://bcv001.uniandes.edu.co/LabHOG.zip contains the resources for this lab. There are 2 directories there:
 
 - Data:
   - caltch_faces: 6,713 cropped 36x36 face images.
