@@ -65,8 +65,7 @@ Ever heard of the [viola-jones algorithm](http://www.vision.caltech.edu/html-fil
 There are lots of implementations around the web, pick the one you like the most and get results on our test set. Include in your report the **quantitative** comparison against multiscale-hog, which one works best? any idea why?
 
 ## Extra credit 2
-
-Our good man waldo is hidden somewhere in the dataset, can you find him?. Tip use this mugshot to find him. gl hf
+Our good man waldo is hidden somewhere in this dataset: http://bcv001.uniandes.edu.co/Waldo.zip, can you find him?. Tip use this mugshot to find him. 
 
 <img src="https://pbs.twimg.com/profile_images/561277979855056896/4yRcS2Zo.png" alt="Waldo" width="250" height="250">
 
