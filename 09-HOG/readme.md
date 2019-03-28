@@ -14,7 +14,7 @@ http://bcv001.uniandes.edu.co/LabHOG.zip contains the resources for this lab. Th
   - caltch_faces: 6,713 cropped 36x36 face images.
   - test_scenes: 130 images for testing.
   - train_non_face_scenes: Negative samples.
-  - extra_test_scenes: It will be updated with **YOUR** pictures for qualitative result and analysis purposes (I will take pictures of you :| ). 
+  - extra_test_scenes: Add your in-the-wild pictures there.
 - Code:
   - `main.m` The top level script for training and testing your object detector. If you run the code unmodified, it will predict random faces in the test images. It calls the following functions, many of which are simply placeholders in the starter code.
   - `get_positive_features.m` (**you code this**). Load cropped positive trained examples (faces) and convert them to HoG features with a call to vl_hog.
@@ -48,6 +48,7 @@ The report for this laboratory must include:
 - How can you evaluate a general detection problem? 
 - Overall description of your strategy including any modifications/enhancements you applied to it.
 - Show and discuss the results of your algorithm.
+- Read the [Viola-Jones paper](http://www.vision.caltech.edu/html-files/EE148-2005-Spring/pprs/viola04ijcv.pdf). What can you say about the differences/similarities?
 - Show how your detector performs on additional images in the `data/extra_test_scenes` directory.
 - Include the precision-recall curve and AP of your final classifier and any interesting variants of your algorithm.
 - What seems to be the limitations of the strategy you developed?
