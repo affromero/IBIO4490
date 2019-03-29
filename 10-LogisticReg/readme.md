@@ -12,7 +12,7 @@ Every machine learning approach either supervised learning, unsupervised learnin
 
 - `Linear regression`. Purely regression, also known as *L2 loss*.
 - `L1 loss`.
-- `Logistic regression`. Binary classification problems, also known as *Cross Entropy*. *Binary Cross-Entropy* for Multi-label datasets.
+- `Logistic regression`. Binary classification problems, also known as *Cross Entropy*. *Binary Cross-Entropy* for Multi-label datasets. [link](https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc). 
 - `Softmax Cross-Entropy`. Generalization of the Logistic regression for many classes. 
 
 Propaganda: If you ever heard of Generative Adversarial Networks (if not, you will, trust me), one of the success about it is that they work with an ensemble of more than 3 cost functions (I use 7 for my current project).
@@ -25,7 +25,7 @@ An optimizer is basically the **learning** pathway. You may *learn* C++ either s
 
 Disclaimer: There is no such a fast way to learn C++.
 
-![Resultado de imagen para how to learn c++ fast](https://qph.fs.quoracdn.net/main-qimg-13befb10b9c8c6b37188c212b06c040c.webp)
+![Resultado de imagen para how to learn c++ fast](https://camo.githubusercontent.com/8cfb8cdc747507a3b2620e73b5226385b78ad94c/687474703a2f2f6162737472757365676f6f73652e636f6d2f7374726970732f6172735f6c6f6e67615f766974615f6272657669732e706e67)
 
 Then, there are several optimizers out there. The most famous and popular one is [Stochastic Gradient Descent](https://towardsdatascience.com/gradient-descent-in-a-nutshell-eaf8c18212f0) (SGD). Recommended [video](https://www.coursera.org/lecture/machine-learning/stochastic-gradient-descent-DoRHJ) by the Machine Learning rockstar Andrew NG.
 
