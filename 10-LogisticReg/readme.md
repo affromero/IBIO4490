@@ -2,7 +2,7 @@
 
 Before going deep with Neural Networks we need to ground the concepts a little bit. In this lab we will introduce the very basic Machine Learning concept of Logistic Regression in order to classify happy faces on the [FER2013](https://www.kaggle.com/deadskull7/fer2013/version/1]) dataset. 
 
-<p align="center"><img width="60%" src="https://ai2-s2-public.s3.amazonaws.com/figures/2017-08-08/4edc7f27d4512b69be54abfc6b9876e5b00725ab/1-Figure1-1.png" /></p>
+<p align="center"><img width="60%" src="https://www.researchgate.net/profile/Martin_Kampel/publication/311573401/figure/fig1/AS:613880195723264@1523371852035/Example-images-from-the-FER2013-dataset-3-illustrating-variabilities-in-illumination.png" /></p>
 
 ## Machine Learning Concepts
 
