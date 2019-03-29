@@ -6,7 +6,7 @@ Before going deep with Neural Networks we need to ground the concepts a little b
 
 ## Machine Learning Concepts
 
-#### Loss
+### Loss
 
 Every machine learning approach either supervised learning, unsupervised learning or even reinforcement learning deal with a cost function. This tells us how good the system is working under certain conditions. Choosing the right loss function is **extremely** important. Traditional (classical (?)) methods only works with one single cost function. There are plenty of loss functions out there including but not limited to:
 
@@ -17,7 +17,7 @@ Every machine learning approach either supervised learning, unsupervised learnin
 
 Propaganda: If you ever heard of Generative Adversarial Networks (if not, you will, trust me), one of the success about it is that they work with an ensemble of more than 3 cost functions (I use 7 for my current project).
 
-#### Optimizer
+### Optimizer
 
 Wait, what? 
 
