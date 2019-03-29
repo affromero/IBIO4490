@@ -65,8 +65,8 @@ Once you set the loss function and the optimizer, hands on it.
 - Study the behavior of these hyper-parameters: 
 
   - `batch_size`: Does it converge when is it too low? Is it better when is it high? Is there a Plateau region for high numbers?
-  - How can you relate the learning rate with the training time and the convergence of the model. Is there an optimal value?
-  - Would it be wise to re-scale the learning rate when the loss is not converging too much? (Divide the LR by some number to fine the results).
+  - How can you relate the `learning rate` with the training time and the `convergence` of the model. Is there an optimal value?
+  - Would it be wise to re-scale the `learning rate` when the loss is not converging too much? (Divide the LR by some number to fine the results).
 
 - What would you change to deal with all the emotions (7) using **one** single loss function? Explain the theory behind and train the whole system (create a new script `main_emotions.py` for that purpose). Tip: `Softmax Cross-Entropy`. 
 
