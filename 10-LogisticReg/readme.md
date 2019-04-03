@@ -4,6 +4,8 @@ Before going deep with Neural Networks we need to ground the concepts a little b
 
 <p align="center"><img width="60%" src="https://www.researchgate.net/profile/Martin_Kampel/publication/311573401/figure/fig1/AS:613880195723264@1523371852035/Example-images-from-the-FER2013-dataset-3-illustrating-variabilities-in-illumination.png" /></p>
 
+#### EDIT [Wed, April 3]: For some reason [FER2013](https://www.kaggle.com/deadskull7/fer2013/version/1]) link is down. Please use this link: http://bcv001.uniandes.edu.co/fer2013.zip
+
 ## Machine Learning Concepts
 
 ### Loss
