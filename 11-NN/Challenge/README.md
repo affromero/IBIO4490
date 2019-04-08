@@ -53,4 +53,5 @@ Then you go back to the home page and can track the leaderboard. You can also ac
 
 # Now, be calm, take a deep breath, and... 
 
-<p align="center"><img width="40%" src="https://spoilertime.com/wp-content/uploads/2017/08/Defenders-Ne.gif?raw=true" /></p>
+<p align="center"><img width="30%" src="https://spoilertime.com/wp-content/uploads/2017/08/Defenders-Ne.gif?raw=true" /></p>
+
