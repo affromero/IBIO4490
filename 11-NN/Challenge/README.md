@@ -22,7 +22,7 @@ http://bcv001.uniandes.edu.co/Emotions_test.zip
 
 ## Server 
 
-The [**test server**](http://bcv001.uniandes.edu.co:3000) allow us to submit results and track the leaderboard.
+The [**test server**](http://bcv001.uniandes.edu.co/contest) allow us to submit results and track the leaderboard.
 
 ![](server.png)
 
@@ -47,7 +47,7 @@ Then you select the file and upload it. Do not forget your team name. Once you s
 
 ![](results.png)
 
-Then you go back to the home page and can track the leaderboard. You can also access the leaderboard using this link: http://bcv001.uniandes.edu.co/leaderboard
+Then you go back to the home page and can track the leaderboard. You can also access the leaderboard using this link: http://bcv001.uniandes.edu.co/contest/leaderboard
 
 
 
