@@ -37,7 +37,7 @@ For simplicity, we will train our models for only 10 out of them:
                 'Young'
 <p align="center"><img width="60%" src="http://mmlab.ie.cuhk.edu.hk/projects/celeba/overview.png" /></p>
 
-You can download the dataset officially from the website link or from [kaggle](https://www.kaggle.com/jessicali9530/celeba-dataset). Nevertheless, for all of you lazy people, you can get it from this [link](http://bcv001.uniandes.edu.co/CelebA.zip).  ((**I did modify the test set, so get it from this one**)).
+You can download the dataset officially from the website link or from [kaggle](https://www.kaggle.com/jessicali9530/celeba-dataset). Nevertheless, for all of you lazy people, you can get it at this location: `/media/user_home2/vision/data/CelebA`.
 
 **You can either train your model using raw images or extracting the face with face detector first.** 
 
