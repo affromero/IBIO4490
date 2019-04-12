@@ -79,7 +79,7 @@ Do not forget to upload a *train.py*, *test.py* and *demo.py*. Explanation about
 **April 25 2017 11:59pm**.
 
 ## 7. BONUS, The CelebA Recognition Challenge 
-We will be holding our small 'texture classification challenge', like most real-world challenges you are free to use **any strategy (cheating is not a valid strategy!)** to produce the better classification over the test set of our modified texture database. Unlike real world challenges, you cannot develop a joint solution with another group, any such submission will be disregarded. 
+We will be holding our 'CelebA classification challenge', like most real-world challenges you are free to use **any strategy (cheating is not a valid strategy!)** to produce the better classification over the test set of our modified CelebA database. Unlike real world challenges, you cannot develop a joint solution with another group, any such submission will be disregarded. 
 
 Your Submissions will have a standard format (just like in Lab 11): *.txt* extension. 
 
