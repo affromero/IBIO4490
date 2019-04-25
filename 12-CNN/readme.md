@@ -37,7 +37,7 @@ For simplicity, we will train our models for only 10 out of them:
                 'Young'
 <p align="center"><img width="60%" src="http://mmlab.ie.cuhk.edu.hk/projects/celeba/overview.png" /></p>
 
-You can download the dataset officially from the website link or from [kaggle](https://www.kaggle.com/jessicali9530/celeba-dataset). Nevertheless, for all of you lazy people, you can get it from this [link](http://bcv001.uniandes.edu.co/CelebA.zip).  ((**I did modify the test set, so get it from this one**)).
+You can download the dataset officially from the website link or from [kaggle](https://www.kaggle.com/jessicali9530/celeba-dataset). Nevertheless, for all of you lazy people, you can get it at this location: `/media/user_home2/vision/data/CelebA`.
 
 **You can either train your model using raw images or extracting the face with face detector first.** 
 
@@ -79,7 +79,7 @@ Do not forget to upload a *train.py*, *test.py* and *demo.py*. Explanation about
 **April 25 2017 11:59pm**.
 
 ## 7. BONUS, The CelebA Recognition Challenge 
-We will be holding our small 'texture classification challenge', like most real-world challenges you are free to use **any strategy (cheating is not a valid strategy!)** to produce the better classification over the test set of our modified texture database. Unlike real world challenges, you cannot develop a joint solution with another group, any such submission will be disregarded. 
+We will be holding our 'CelebA classification challenge', like most real-world challenges you are free to use **any strategy (cheating is not a valid strategy!)** to produce the better classification over the test set of our modified CelebA database. Unlike real world challenges, you cannot develop a joint solution with another group, any such submission will be disregarded. 
 
 Your Submissions will have a standard format (just like in Lab 11): *.txt* extension. 
 
